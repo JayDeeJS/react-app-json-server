@@ -1,0 +1,6 @@
+@import './dark/dark.css';
+@import './light/light.css';
+
+.title {
+    color: var(--color);
+}
