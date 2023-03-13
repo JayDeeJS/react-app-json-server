@@ -5,6 +5,7 @@ import "styles/index.css"
 import LoginAuth from "components/LoginAuth";
 import AuthProvider from "providers/AuthProvider/ui/AuthProvider";
 import { Route, Routes } from "react-router-dom";
+import Posts from "components/Posts";
 
 
 function App() {
@@ -17,12 +18,14 @@ function App() {
   return (
     <div className={`app ${theme}`}>
       <AuthProvider>
-        <button onClick={toggleTheme}>Toggle</button>
+        {/* <button onClick={toggleTheme}>Toggle</button> */}
         <Routes>
           <Route path="/" element={
-            <LoginAuth/>
+            <div className="authBlock">
+              <LoginAuth/>
+            </div>
           }/>
-          <Route path="/posts" element={<div>Posts</div>}/>
+          <Route path="/posts" element={<Posts/>}/>
         </Routes>
         </AuthProvider>
     </div>

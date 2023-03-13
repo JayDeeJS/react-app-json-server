@@ -32,10 +32,9 @@ const LoginAuth = () => {
                 navigate('/posts')
             })
     }
-    console.log('work');
 
     return (
-        <form onSubmit={submitLog}>
+        <form onSubmit={submitLog} className="formAuth">
             <input name="username" value={value.username} onChange={handleChange} placeholder="Login"/>
             <input name="password" value={value.password} onChange={handleChange} placeholder="Password"/>
             <button type="submit">Sign in</button>
